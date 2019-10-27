@@ -79,20 +79,20 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Returns: Returns Json data about categories 
 - Success Response:
                     ```
-                    "categories": ```{
+                        {
+                        "categories": {
                         "1": "Science",
                         "2": "Art",
                         "3": "Geography",
                         "4": "History",
                         "5": "Entertainment",
                         "6": "Sports"
-                    }```,
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true,
-                    "total_categories": 6
-                    }
-
+                        },
+                        "status_code": 200,
+                        "status_message": "OK",
+                        "success": true,
+                        "total_categories": 6
+                        }
                     ```
 
 #### `GET '/questions'`
@@ -102,35 +102,36 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Returns: Json data about categories and questions
 - Success Response:
                     ```
-                    "categories": {
+                        {
+                        "categories": {
                         "1": "Science",
                         "2": "Art",
                         "3": "Geography",
                         "4": "History",
                         "5": "Entertainment",
                         "6": "Sports"
-                    },
-                    "current_category": [
-                        2,
-                        3,
-                        4,
-                        5,
-                        6
-                    ],
-                    "questions": [
-                        {
-                        "answer": "Maya Angelou",
-                        "category": 4,
-                        "difficulty": 2,
-                        "id": 5,
-                        "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
+                        },
+                        "current_category": [
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "questions": [
+                            {
+                            "answer": "Maya Angelou",
+                            "category": 4,
+                            "difficulty": 2,
+                            "id": 5,
+                            "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
+                            }
+                        ],
+                        "status_code": 200,
+                        "status_message": "OK",
+                        "success": true,
+                        "total_questions": 1
                         }
-                    ],
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true,
-                    "total_questions": 1
-                    }
                     ```
 
 #### `DELETE '/questions/<int:question_id>'`
@@ -178,6 +179,7 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Returns: Jason data of questions filtered by specified search term.
 - Success Response:
                     ```
+                    {
                     "total_questions": 2
                     "current_category": [
                         3,
@@ -211,6 +213,7 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Returns: Jason data about questions filtered by the ID of category
 - Success Response:
                     ```
+                    {
                     "current_category": [
                         1
                     ],
@@ -234,14 +237,16 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Fetches a random question from a specified category that is not one of the previous questions.
 - Required URL Arguments: None
 - Required Data Arguments: Jason
-                          ```{"previous_questions": ["ID of previous question"], 
+                          ```
+                            {
+                              "previous_questions": ["ID of previous question"], 
                               "quiz_category": {"type": "Category type field", "id": "ID number field"}
                               }
                           ```
 - Returns: Jason data about the question from a specified category that is not one of the    previous 
 - Success Response:
                     ```  
-                    "question": {
+                    {"question": {
                         "answer": "Alexander Fleming",
                         "category": 1,
                         "difficulty": 3,
