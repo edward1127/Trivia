@@ -78,22 +78,22 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Required Data Arguments: None
 - Returns: Returns Json data about categories 
 - Success Response:
-                    ```
-                        {
-                        "categories": {
-                        "1": "Science",
-                        "2": "Art",
-                        "3": "Geography",
-                        "4": "History",
-                        "5": "Entertainment",
-                        "6": "Sports"
-                        },
-                        "status_code": 200,
-                        "status_message": "OK",
-                        "success": true,
-                        "total_categories": 6
-                        }
-                    ```
+```
+    {
+    "categories": {
+    "1": "Science",
+    "2": "Art",
+    "3": "Geography",
+    "4": "History",
+    "5": "Entertainment",
+    "6": "Sports"
+    },
+    "status_code": 200,
+    "status_message": "OK",
+    "success": true,
+    "total_categories": 6
+    }
+```
 
 #### `GET '/questions'`
 - Fetches a dictionary of quetions
@@ -101,38 +101,38 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Required Data Arguments: None
 - Returns: Json data about categories and questions
 - Success Response:
-                    ```
-                        {
-                        "categories": {
-                        "1": "Science",
-                        "2": "Art",
-                        "3": "Geography",
-                        "4": "History",
-                        "5": "Entertainment",
-                        "6": "Sports"
-                        },
-                        "current_category": [
-                            2,
-                            3,
-                            4,
-                            5,
-                            6
-                        ],
-                        "questions": [
-                            {
-                            "answer": "Maya Angelou",
-                            "category": 4,
-                            "difficulty": 2,
-                            "id": 5,
-                            "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
-                            }
-                        ],
-                        "status_code": 200,
-                        "status_message": "OK",
-                        "success": true,
-                        "total_questions": 1
-                        }
-                    ```
+```
+    {
+    "categories": {
+    "1": "Science",
+    "2": "Art",
+    "3": "Geography",
+    "4": "History",
+    "5": "Entertainment",
+    "6": "Sports"
+    },
+    "current_category": [
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "questions": [
+        {
+        "answer": "Maya Angelou",
+        "category": 4,
+        "difficulty": 2,
+        "id": 5,
+        "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
+        }
+    ],
+    "status_code": 200,
+    "status_message": "OK",
+    "success": true,
+    "total_questions": 1
+    }
+```
 
 #### `DELETE '/questions/<int:question_id>'`
 - Deletes the `question_id` of question 
@@ -140,36 +140,36 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Required Data Arguments: None
 - Returns: Json data about the deleted quetion's ID 
 - Success Response:
-                    ```
-                    {
-                    "deleted": 6,
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true
-                    }
-                    ```
+```
+{
+"deleted": 6,
+"status_code": 200,
+"status_message": "OK",
+"success": true
+}
+```
 
 #### `POST '/questions'`
 - Post a new question in a database.
 - Required URL Arguments: None 
 - Required Data Arguments:  Json data                
-                            ```
-                            {
-                            "question": "question field"
-                            "answer": "answer field"
-                            "category": "category ID field"
-                            "difficulty": "level of difficulty field"
-                            }
-                            ```
+```
+{
+"question": "question field"
+"answer": "answer field"
+"category": "category ID field"
+"difficulty": "level of difficulty field"
+}
+```
 - Returns: Json data about if a quesion is posted successfully 
 - Success Response:
-                    ```
-                    {
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true
-                    }
-                    ```
+```
+{
+"status_code": 200,
+"status_message": "OK",
+"success": true
+}
+```
 
 #### `POST '/searchterms'`
 - Fetches questions filtered by specified search term.
@@ -178,33 +178,33 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Required DATA Arguments:  Jason data `{"searchTerm": "searchTerm"}`
 - Returns: Jason data of questions filtered by specified search term.
 - Success Response:
-                    ```
-                    {
-                    "total_questions": 2
-                    "current_category": [
-                        3,
-                        4
-                    ],
-                    "questions": [
-                        {
-                        "answer": "Muhammad Ali",
-                        "category": 4,
-                        "difficulty": 1,
-                        "id": 9,
-                        "question": "What boxer's original name is Cassius Clay?"
-                        },
-                        {
-                        "answer": "Lake Victoria",
-                        "category": 3,
-                        "difficulty": 2,
-                        "id": 13,
-                        "question": "What is the largest lake in Africa?"
-                        }
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true,
-                    }
-                    ```
+```
+{
+"total_questions": 2
+"current_category": [
+    3,
+    4
+],
+"questions": [
+    {
+    "answer": "Muhammad Ali",
+    "category": 4,
+    "difficulty": 1,
+    "id": 9,
+    "question": "What boxer's original name is Cassius Clay?"
+    },
+    {
+    "answer": "Lake Victoria",
+    "category": 3,
+    "difficulty": 2,
+    "id": 13,
+    "question": "What is the largest lake in Africa?"
+    }
+"status_code": 200,
+"status_message": "OK",
+"success": true,
+}
+```
 #### `GET '/categories/<int:category_id>/questions'`
 - Fetches questions filtered by specified category.
 - Required URL Arguments: `category_id: id=[category_id_integer]`
@@ -212,52 +212,52 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Required Data Arguments: None
 - Returns: Jason data about questions filtered by the ID of category
 - Success Response:
-                    ```
-                    {
-                    "current_category": [
-                        1
-                    ],
-                    "questions": [
-                        {
-                        "answer": "The Liver",
-                        "category": 1,
-                        "difficulty": 4,
-                        "id": 20,
-                        "question": "What is the heaviest organ in the human body?"
-                        }
-                    ],
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true,
-                    "total_questions": 1
-                    }
-                    ```
+```
+{
+"current_category": [
+    1
+],
+"questions": [
+    {
+    "answer": "The Liver",
+    "category": 1,
+    "difficulty": 4,
+    "id": 20,
+    "question": "What is the heaviest organ in the human body?"
+    }
+],
+"status_code": 200,
+"status_message": "OK",
+"success": true,
+"total_questions": 1
+}
+```
 
 #### `POST '/quizzes'`
 - Fetches a random question from a specified category that is not one of the previous questions.
 - Required URL Arguments: None
 - Required Data Arguments: Jason
-                          ```
-                            {
-                              "previous_questions": ["ID of previous question"], 
-                              "quiz_category": {"type": "Category type field", "id": "ID number field"}
-                              }
-                          ```
+```
+{
+  "previous_questions": ["ID of previous question"], 
+  "quiz_category": {"type": "Category type field", "id": "ID number field"}
+  }
+```
 - Returns: Jason data about the question from a specified category that is not one of the    previous 
 - Success Response:
-                    ```  
-                    {"question": {
-                        "answer": "Alexander Fleming",
-                        "category": 1,
-                        "difficulty": 3,
-                        "id": 21,
-                        "question": "Who discovered penicillin?"
-                    },
-                    "status_code": 200,
-                    "status_message": "OK",
-                    "success": true
-                    }
-                    ```
+``` 
+{"question": {
+    "answer": "Alexander Fleming",
+    "category": 1,
+    "difficulty": 3,
+    "id": 21,
+    "question": "Who discovered penicillin?"
+},
+"status_code": 200,
+"status_message": "OK",
+"success": true
+}
+```
 
 ## Testing
 To run the tests, run
